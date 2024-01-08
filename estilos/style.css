@@ -39,6 +39,7 @@ header > .menu{
 .menu .menu_link{
     text-decoration: none;
     color:rgb(237, 234, 234);
+    text-align:center;
 }
 
 #lista_animes > .menu_link{
@@ -119,7 +120,7 @@ section#conteudo_total{
     header > .menu{
         color:white;
         display:grid;
-        grid-template-columns: 81px 132px 81px 81px;
+        grid-template-columns: 72px 150px 75px 77px;
         grid-template-areas:
          "inicio lista_a ep genero"
         ;
