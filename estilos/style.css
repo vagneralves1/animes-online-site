@@ -120,7 +120,7 @@ section#conteudo_total{
     header > .menu{
         color:white;
         display:grid;
-        grid-template-columns: 72px 150px 75px 77px;
+        grid-template-columns: 72px 150px 80px 80px;
         grid-template-areas:
          "inicio lista_a ep genero"
         ;
