@@ -1,0 +1,533 @@
+@charset "UTF-8";
+
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color:#1B1B1C;
+    display:grid;
+
+}
+
+header{
+    background-image:linear-gradient(10deg, black, rgb(8, 8, 8), rgb(33, 33, 33));
+    height:140px;
+}
+
+header > h1{
+    color:white;
+    text-align:center;
+    padding-top:25px;
+    padding-bottom:30px;
+}
+
+header > .menu{
+    color:white;
+    display:grid;
+    grid-template-columns: 100px 150px 100px 100px;
+    grid-template-areas:
+     "inicio lista_a ep genero"
+    ;
+}
+
+.menu_link, .menu_lista{
+    padding:10px;
+}
+
+.menu .menu_link{
+    text-decoration: none;
+    color:rgb(237, 234, 234);
+}
+
+#lista_animes > .menu_link{
+    display:none;
+}
+
+#lista_animes:hover > .menu_link{
+    display:block;
+    position:relative;
+    z-index: 0;
+}
+
+a#inicio{
+    grid-area:inicio;
+    text-align:center;
+    margin-left:10px;
+}
+
+a#lista_animes{
+    grid-area:lista_a;
+    text-align:center;
+}
+
+a#episodios{
+    grid-area: ep;
+}
+
+a#genero{
+    grid-area: genero;
+    text-align:center;
+}
+
+.menu_link:hover{
+    background-color:#242424;
+    color:rgb(177, 36, 36);
+    border-radius:5px 5px 0px 0px; 
+    transition-duration: 0.4s;
+    position:relative;
+    z-index: 0;
+}
+
+#lista_anime > .menu_link{
+    position:absolute;
+    z-index: 0;
+}
+
+#lista_animes > .menu_link:hover{
+    background-color:rgb(24, 24, 24);
+    color:red;
+}
+
+section#conteudo_total{
+    background-color:#060505;
+    padding:15px;
+}
+
+@media(min-width:820px){
+    main#animes{
+        max-width:800px;
+        height:100%;
+    }
+    main .popular_ano{
+        text-align:top;
+        width:100%;
+    }
+    section#conteudo_total{
+        max-width:1005px;
+        margin:auto;
+        display:grid;
+        grid-template-columns: repeat('animes', 'popular_ano');
+        grid-template-areas:
+        "animes popular_ano"
+        ;
+    }
+}
+
+main#animes{
+    max-width:970px;
+    min-width:250px;
+    background-color:black;
+    margin:auto;
+    grid-area:animes;
+}
+
+main #sub_titulo{
+    background-color:#0d0c0c;
+    padding-left:15px;
+    padding-bottom:10px;
+    height:20px;
+}
+
+main > h2 a{
+    text-decoration:none;
+    color:rgb(240, 238, 238);
+    font-size:0.6em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+main div#alfabeto{
+    background-color:rgb(35, 33, 33);
+    grid-area:alfabeto;
+}
+
+main .alfabeto_1{
+    max-width:860px;
+    margin:auto;
+    background-color:rgb(35, 33, 33);
+}
+
+main .alfa{
+    display:inline-block;
+    text-decoration:none;
+    color:rgb(218, 213, 213);
+    padding:10px 0px 5px 18px;
+    text-align:center;
+}
+
+main .alfa:hover{
+    color:rgb(189, 1, 1);
+}
+
+main .caixa_titulo{
+    margin-left:25px;
+    margin-top:15px;
+    display:grid;
+    grid-template-columns:4px ;
+    grid-template-areas: "linha titulo vermais";
+}
+
+main .caixa_topico{
+    background-color:red;
+    width:4px;
+    grid-area: linha;
+}
+
+main .topico{
+    max-width:1200px;
+    background-color:black;
+    color:white;
+    margin-left:3px;
+    grid-area: titulo;
+    text-align:left;
+}
+
+main .butao_ver_mais{
+    margin:auto;
+    background-color:rgb(175, 26, 26);
+    color:white;
+    font-size:0.8em;
+    text-align:right;
+    padding:3px;
+    border-radius:8px;
+    border: 1px solid rgb(149, 0, 0);
+    grid-area: vermais;
+}
+
+main .butao_ver_mais:hover{
+    background-color:rgb(191, 7, 7);
+    color:rgba(252, 237, 237, 0.895);
+}
+
+main .butao_ver_mais:active{
+    background-color:rgb(157, 0, 0);
+    color:rgb(204, 110, 110);
+}
+
+main .top_animes_online{
+    display:grid;
+    grid-template-areas: "haikyu hxh nanatsu";
+    background-color:#060505;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+main .bloco_anime{
+    max-width:200px;
+    min-width:70px;
+    margin-left:10px;
+    background-color:#060505;
+    margin:auto;
+}
+
+main .bloco_anime_inv{
+    max-width:200px;
+    min-width:70px;
+    margin-left:10px;
+    background-color:#060505;
+    margin:auto;
+}
+
+main .bloco_anime_inv{
+    display:none;
+}
+
+main .link_anime{
+    text-align:center;
+    text-decoration:none;
+    color:rgb(234, 233, 233);
+    font-size:80%;
+}
+
+main .link_anime:hover{
+    color:rgb(194, 2, 2);
+}
+
+main .link_anime:active{
+    color:rgb(164, 0, 0);
+}
+
+main .capa_anime{
+    width:96%;
+    border-radius:6px;
+}
+
+#haikyu{
+    grid-area:haikyu;
+}
+
+#hxh{
+    grid-area:hxh;
+}
+
+#nanatsu{
+    grid-area:nanatsu;
+}
+
+@media(min-width:600px){
+    #doulou{
+        grid-area:doulou;
+    }
+    main #doulou{
+        display:block;
+    }
+    main .capa_anime{
+        width:96%;
+    }
+    main .top_animes_online{
+        grid-template-areas: "haikyu hxh nanatsu doulou";
+    }
+}
+
+@media(min-width:750px){
+    #doulou{
+        grid-area:doulou;
+    }
+    #lorlin{
+        grid-area:lorlin;
+    }
+    main .bloco_anime{
+        max-width:200px;
+        min-width:70px;
+    }
+    main .bloco_anime_inv{
+        max-width:200px;
+        min-width:70px;
+    }
+    main #doulou, #lorlin{
+        display:block;
+    }
+    main .capa_anime{
+        width:96%;
+    }
+    main .top_animes_online{
+        grid-template-areas: "haikyu hxh nanatsu doulou lorlin";
+    }
+}
+
+main .eps{
+    display:grid;
+    grid-template-areas:
+    "ep1 ep2"
+    "ep3 ep4"
+    "ep5 ep6"
+    ;}
+
+main .bloco_ep{
+    background-color:#060505;
+    max-width:300px;
+    padding:5px;
+    margin:auto;
+}
+
+main .capa_ep_anime{
+    width:100%;
+    border-radius:5px;
+}
+
+#ep1{
+    grid-area:ep1;
+}
+
+#ep2{
+    grid-area:ep2;
+}
+
+#ep3{
+    grid-area:ep3;
+}
+
+#ep4{
+    grid-area:ep4;
+}
+
+#ep5{
+    grid-area:ep5;
+}
+
+#ep6{
+    grid-area:ep6;
+}
+
+@media (min-width: 620px){
+    main .eps{
+        grid-template-areas:
+        "ep1 ep2 ep3"
+        "ep4 ep5 ep6"
+        ;
+    }
+}
+
+main .top_animes_recentes{
+    display:grid;
+    grid-template-areas: "kusuriya nanatsu2 houkago";
+    background-color:#060505;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+main #kusuriya{
+    grid-area:kusuriya;
+}
+
+main #nanatsu2{
+    grid-area:nanatsu2;
+}
+
+main #houkago{
+    grid:houkago;
+}
+
+main #potion{
+    grid-area:potion;
+}
+
+main #kikansha{
+    grid-area:kikansha;
+}
+
+@media(min-width:600px){
+    main #potion{
+        display:block;
+    }
+    main .capa_anime{
+        width:96%;
+    }
+    main .top_animes_recentes{
+        grid-template-areas: "kusuriya nanatsu2 houksgo potion";
+    }
+}
+
+@media(min-width:750px){
+    main #kikansha{
+        display:block;
+    }
+    main .capa_anime{
+        width:96%;
+    }
+    main .top_animes_recentes{
+        grid-template-areas: "kusuriya nanatsu2 houksgo potion kikansha";
+    }
+}
+
+main#popular_ano{
+    background-color:#060505;
+    max-width:970px;
+    min-width:250px;
+    width:100%;
+    margin:auto;
+    grid-area:popular_ano;
+}
+
+main#popular_ano > .titulo_popular{
+    color:white;
+    font-size:1.3em;
+    margin-left:10px;
+    grid-area:titulo;
+}
+
+main .anime_popular{
+    background-color:#1A1A1A;
+    margin-left:10px;
+    margin-right:20px;
+    display:grid;
+    grid-template-columns: 170px;
+    grid-template-areas:
+     "capa_pop titulo"
+     "capa_pop lanço"
+     "capa_pop estrela"
+     "capa_pop nota"
+    ;
+}
+
+main .capa_popular{
+    max-width:80px;
+    border-radius:5px;
+    grid-area:capa_pop;
+}
+
+main .nome_popular{
+    text-align:left;
+    margin-top:10px;
+    margin-left:-70px;
+}
+
+main .lanço{
+    grid-area: lanço;
+    margin-top:-20px;
+    margin-left:-70px;
+    color:rgb(168, 167, 167);
+}
+
+main .estrela{
+    grid-area:estrela;
+    background-color:rgb(255, 225, 0);
+    margin-left:-70px;
+    margin-top:-10px;
+    height:17px;
+}
+
+main .nota{
+    color:rgb(218, 218, 218);
+    grid-area: nota;
+    text-align:left;
+    margin-top:-37px;
+    margin-left:-35px;
+}
+
+main .link_popular{
+    color:rgb(237, 236, 236);
+    text-decoration:none;
+    padding:10px;
+}
+
+main .titulo_ano{
+    color:white;
+    padding:15px;
+}
+
+main .bloco_ano{
+    margin:20px;
+    display:grid;
+    grid-template-areas: 
+    "ano ano ano"
+    ;
+}
+
+main .ano_caixa{
+    background-color:rgb(31, 29, 29);
+    height:30px;
+    margin:3px;
+    text-align:center;
+    line-height:32px;
+}
+
+main .ano_caixa:hover{
+    background-color:rgb(199, 22, 22);
+}
+
+main .ano{
+    text-decoration:none;
+    color:white;
+}
+
+
+
+footer{
+    background-color:black;
+    color:white;
+    margin-top:30px;
+}
+
+footer > .roda_pe{
+    padding:20px 20px 7px 20px;
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+footer > .aroba{
+    text-align:center;
+    padding-bottom:10px;
+}
