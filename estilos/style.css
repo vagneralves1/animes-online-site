@@ -115,6 +115,17 @@ section#conteudo_total{
     }
 }
 
+@media(max-width: 470px){
+    header > .menu{
+        color:white;
+        display:grid;
+        grid-template-columns: 83px 135px 83px 83px;
+        grid-template-areas:
+         "inicio lista_a ep genero"
+        ;
+    }
+}
+
 main#animes{
     max-width:970px;
     min-width:250px;
