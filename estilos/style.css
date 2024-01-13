@@ -149,27 +149,26 @@ main > h2 a{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-main div#alfabeto{
-    background-color:rgb(35, 33, 33);
-    grid-area:alfabeto;
+section > main > div#alfabeto > ul{
+    background-color: rgb(48, 47, 47);
 }
 
-main .alfabeto_1{
-    max-width:860px;
-    margin:auto;
-    background-color:rgb(35, 33, 33);
+div#alfabeto > ul > li{
+    display: inline-block;
+    list-style-type: none;
 }
 
-main .alfa{
-    display:inline-block;
-    text-decoration:none;
-    color:rgb(218, 213, 213);
-    padding:10px 0px 5px 18px;
-    text-align:center;
+div#alfabeto > ul > li > a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    padding-top: 10px;
+    padding: 10px;
+    color: white;
 }
 
-main .alfa:hover{
-    color:rgb(189, 1, 1);
+div#alfabeto > ul > li > a:hover{
+    color: red;
 }
 
 main .caixa_titulo{
